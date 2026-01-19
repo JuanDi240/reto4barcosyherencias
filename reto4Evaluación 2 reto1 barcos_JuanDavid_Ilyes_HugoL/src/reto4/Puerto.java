@@ -1,7 +1,6 @@
 package reto4;
 
 import java.util.ArrayList;
-import reto4.Barco;
 
 public class Puerto {
 	protected ArrayList<Barco> barcos = new ArrayList<>();
@@ -14,12 +13,33 @@ public class Puerto {
 	}
 	
 	public boolean salirBarco(String nombre) {
+		boolean losaco  = false;
 		for (int i = 0; i < barcos.size(); i++) {
 			Barco b = barcos.get(i);
 			
 		if (b.getNombre().equals(nombre)) {
 			barcos.remove(i);
-		}return true;
+			losaco = true;
 		}
+		}
+		return losaco;
 	}
+	
+	public double calcularPrecio(Barco b, int horas, double precioCombustible) {
+		if (b.calcularAutonomia() < horas) {
+			return -1;
+		}else {return horas*b.getMotor().getConsumo()*precioCombustible;}
+		
+		
+		
+		
+		
+	}
+	
+	
+	
+	
+	
+	
+	
 }
