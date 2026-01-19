@@ -30,10 +30,11 @@ public class Puerto {
 			return -1;
 		}else {return horas*b.getMotor().getConsumo()*precioCombustible;}
 		
-		
-		
-		
-		
+	}
+
+	public Puerto(ArrayList<Barco> barcos) {
+		super();
+		this.barcos = barcos;
 	}
 	
 	
