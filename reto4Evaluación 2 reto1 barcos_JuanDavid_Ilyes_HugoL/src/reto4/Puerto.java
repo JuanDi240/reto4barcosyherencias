@@ -36,6 +36,14 @@ public class Puerto {
 		super();
 		this.barcos = barcos;
 	}
+
+	public ArrayList<Barco> getBarcos() {
+		return barcos;
+	}
+
+	public void setBarcos(ArrayList<Barco> barcos) {
+		this.barcos = barcos;
+	}
 	
 	
 	
